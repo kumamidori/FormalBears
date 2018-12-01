@@ -1,0 +1,36 @@
+{
+    "name": "fob/formalbears",
+    "type": "library",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Atsuhiro Kubo",
+            "email": "kubo@iteman.jp"
+        },
+        {
+            "name": "Nana Yamane",
+            "email": "shigematsu.nana@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.8",
+        "bear/package": "^1.9.1",
+        "josegonzalez/dotenv": "^3.2",
+        "symfony/config": "~3.4",
+        "symfony/yaml": "~3.4",
+        "symfony/dotenv": "~3.4",
+        "symfony/dependency-injection": "~3.4"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "^7.4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "FormalBears\\": "src/"
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    }
+}
