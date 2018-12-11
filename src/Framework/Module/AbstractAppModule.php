@@ -52,8 +52,9 @@ abstract class AbstractAppModule extends AbstractConfigAwareModule
     protected function loadDotenv()
     {
         $dotenv = new Dotenv();
-        $dotenv->load($this->appMeta->appDir.'/.env');
-
+        if (file_exists($this->appMeta->appDir.'/.env')) {
+            $dotenv->load($this->appMeta->appDir.'/.env');
+        }
         foreach ($this->appMeta->contexts as $context) {
             if (file_exists($this->appMeta->appDir.'/.env.'.$context)) {
                 $dotenv->load($this->appMeta->appDir.'/.env.'.$context);
