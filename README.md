@@ -1,6 +1,6 @@
 # FormalBears
 
-- このリポジトリは [@iteman (KUBO Atuhiro)](https://github.com/iteman) さんによる `FormalBears` をフォークして改変して作ったものです。
+- このリポジトリは [@iteman (KUBO Atuhiro)](https://github.com/iteman) さんによる `FormalBears` をフォークして改変して作ったものです。オリジナルの著者の承諾を得て公開しています。
 - FormalBears オリジナルプロジェクトは現在のところ限定公開ですが、著者による紹介のスライドが [こちら](https://www.slideshare.net/iteman/the-birth-of-formalbears) で公開されています。
 - オリジナルプロジェクトの方にはさまざまな機能がありますが、このパッケージは、そのうちの `コンフィグレーション言語機能` だけを取り出したサブセット版です。
 - 本家とはパッケージのライフサイクルが独立しています。
