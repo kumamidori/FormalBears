@@ -65,6 +65,10 @@ composer require fob/formalbears
 
 上記のように設定すれば、prod の環境では `app` の設定に `prod` のオーバーライド設定をマージさせることができます。
 
+## Links
+
+- [kumamidori/FormalBearsDemo](https://github.com/kumamidori/FormalBearsDemo)
+
 ## TODO
 
 - テスト
