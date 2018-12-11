@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0.8",
+        "php": ">=7.1.0",
         "bear/package": "^1.9.1",
         "josegonzalez/dotenv": "^3.2",
         "symfony/config": "~3.4",
