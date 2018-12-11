@@ -9,6 +9,12 @@
 
 PHP7.0.8以上
 
+## Install
+
+```
+composer require fob/formalbears
+```
+
 ## 機能
 
 1. 設定ファイルによる設定（ `YAML` ）とグラマー定義を通したコンパイル機能（ `symfony/config` 統合）
