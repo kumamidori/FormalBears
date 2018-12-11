@@ -7,7 +7,7 @@
 
 ## Requires
 
-PHP7.0.8以上
+PHP7.1以上
 
 ## Install
 
