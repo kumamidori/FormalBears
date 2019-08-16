@@ -1,12 +1,88 @@
 # FormalBears
+ 
+Meta framwork for [BEAR.Sunday](https://github.com/bearsunday/BEAR.Sunday) applications
 
-- このリポジトリは @iteman さんによる FormalBears をフォークして改変して作ったものです。
-- オリジナルプロジェクトの方は現在のところ限定公開なのですが、著者から紹介のスライドが[こちら](https://www.slideshare.net/iteman/the-birth-of-formalbears)に公開されています。
-オリジナルには Doctrine 統合機能や拡張ポイント機能などさまざまな機能があるのですが、このパッケージは、そのうちのコンフィグレーション言語機能だけを取り出したサブセット版です。
+- [@iteman (KUBO Atuhiro)](https://github.com/iteman) さんによるメタフレームワーク `FormalBears` を改変して作りました（著者の承諾を得て公開しています）。
+- オリジナル版は限定公開です。著者による紹介のスライドが [こちら](https://www.slideshare.net/iteman/the-birth-of-formalbears) で公開されています。
+
+## Requires
+
+PHP7.1以上
+
+## Install
+
+```
+composer require fob/formalbears
+```
+
+## 機能
+
+1. 設定ファイルによる設定（ `YAML` ）とグラマー定義を通したコンパイル機能（ `symfony/config` 統合）
+2. 設定のマージ（デフォルト値の設定、development / production といった環境毎のオーバーライド）
+3. 環境変数統合
+
+（4. マルチバインディング：未実装）
+
+## Application Directories
+
+アプリケーションパッケージはルートレベルのディレクトリとして下記ディレクトリを必要とします。
+
+| Subject | it MUST be named: |
+| ----------------------------------------------- | -------------------------- |
+| configuration files                             | `etc/config/`                  |
+
+
+`config` ディレクトリは下記のサブディレクトリを必要とします。
+
+```
+[config]
+   |
+   +--- [contexts] コンテキストグローバルの設定 
+   +--- [modules] 各モジュールの設定
+```
+
+たとえば下記のように使います。
+
+```
+[config]
+   |
+   +--- [contexts] コンテキストグローバル設定 
+            |
+            +--- app.yml
+            +--- api.yml
+            +--- cli.yml
+            +--- prod.yml
+            
+   +--- [modules] 各モジュールの設定
+            |
+            [my_project_foo] MyProjectFooModule に対応する設定ルートディレクトリ
+                |
+                +--- [app]
+                        |
+                        +--- my_project_foo.yaml
+                +--- [prod]
+                        |
+                        +--- my_project_foo.yaml
+```
+
+上記のように設定すれば、prod の環境では `app` の設定に `prod` のオーバーライド設定をマージさせることができます。
+
+## Links
+
+- [kumamidori/FormalBearsDemo](https://github.com/kumamidori/FormalBearsDemo)
+- [\[FormalBears\] Configurable BEAR\.Sunday \- Qiita](https://qiita.com/kumamidori/items/53f3a271e3de70c5abf4)
+
+## TODO
+
+- マルチバインディング対応
+- 環境変数統合のサンプルアプリケーション追加
+- テスト
+- CI
+- CS
 
 ## Copyright
 
-Copyright (c) 2018 Atsuhiro Kubo, Nana Yamane, All rights reserved.
+Copyright (c) 2019 Atsuhiro Kubo, Nana Yamane, All rights reserved.
 
 ## License
 
