@@ -1,6 +1,7 @@
 <?php
 /*
  * Copyright (c) Atsuhiro Kubo <kubo@iteman.jp>,
+ *               Nana Yamane <shigematsu.nana@gmail.com>,
  * All rights reserved.
  *
  * This file is part of FormalBears.
@@ -10,6 +11,7 @@
  * distribution, and is available at http://opensource.org/licenses/BSD-2-Clause
  */
 
+declare(strict_types=1);
 namespace FormalBears\Foundation\Config\Loader;
 
 use FormalBears\Foundation\Config\Process\Registry;

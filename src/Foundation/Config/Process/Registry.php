@@ -10,6 +10,7 @@
  * distribution, and is available at http://opensource.org/licenses/BSD-2-Clause
  */
 
+declare(strict_types=1);
 namespace FormalBears\Foundation\Config\Process;
 
 use FormalBears\Foundation\Config\Definition\ConfigurationInterface;

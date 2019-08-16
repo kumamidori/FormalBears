@@ -10,6 +10,7 @@
  * distribution, and is available at http://opensource.org/licenses/BSD-2-Clause
  */
 
+declare(strict_types=1);
 namespace FormalBears\Framework\AppMeta;
 
 final class AppMeta

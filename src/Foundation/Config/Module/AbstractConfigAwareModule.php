@@ -11,13 +11,15 @@
  * distribution, and is available at http://opensource.org/licenses/BSD-2-Clause
  */
 
+declare(strict_types=1);
 namespace FormalBears\Foundation\Config\Module;
 
 use FormalBears\Foundation\Config\Definition\ConfigurationInterface;
 use FormalBears\Foundation\Config\Process\Registry;
+use FormalBears\Foundation\Di\AbstractPluginModule;
 use Ray\Di\AbstractModule;
 
-abstract class AbstractConfigAwareModule extends AbstractModule
+abstract class AbstractConfigAwareModule extends AbstractPluginModule
 {
     /**
      * @var array

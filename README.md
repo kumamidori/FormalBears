@@ -17,11 +17,10 @@ composer require fob/formalbears
 
 ## 機能
 
-1. 設定ファイルによる設定（ `YAML` ）とグラマー定義を通したコンパイル機能（ `symfony/config` 統合）
-2. 設定のマージ（デフォルト値の設定、development / production といった環境毎のオーバーライド）
-3. 環境変数統合
-
-（4. マルチバインディング：未実装）
+- 設定ファイルによる設定（ `YAML` ）とグラマー定義を通したコンパイル機能（ `symfony/config` 統合）
+- 設定のマージ（デフォルト値の設定、development / production といった環境毎のオーバーライド）
+- 環境変数統合
+- マルチバインディング (ref. [Multibindings · google/guice](https://github.com/google/guice/wiki/Multibindings) )
 
 ## Application Directories
 
@@ -74,7 +73,6 @@ composer require fob/formalbears
 
 ## TODO
 
-- マルチバインディング対応
 - 環境変数統合のサンプルアプリケーション追加
 - テスト
 - CI

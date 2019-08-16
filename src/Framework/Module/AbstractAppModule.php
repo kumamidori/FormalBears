@@ -11,6 +11,7 @@
  * distribution, and is available at http://opensource.org/licenses/BSD-2-Clause
  */
 
+declare(strict_types=1);
 namespace FormalBears\Framework\Module;
 
 use FormalBears\Foundation\Config\Loader\YamlFileLoader;
@@ -47,6 +48,7 @@ abstract class AbstractAppModule extends AbstractConfigAwareModule
         parent::__construct($registry, $module);
 
         $this->bind(AppMeta::class)->toInstance($this->appMeta);
+        $this->configureExtensionPoints();
     }
 
     protected function loadDotenv()
