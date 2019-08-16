@@ -77,7 +77,7 @@ class YamlFileLoader extends AbstractFileLoader
     private function loadResource($resource)
     {
         try {
-            return $this->parser->parse(file_get_contents($resource), Yaml::PARSE_CONSTANT | Yaml::PARSE_CUSTOM_TAGS | Yaml::PARSE_KEYS_AS_STRINGS);
+            return $this->parser->parse(file_get_contents($resource), Yaml::PARSE_CONSTANT | Yaml::PARSE_CUSTOM_TAGS);
         } catch (ParseException $e) {
             throw new YamlSyntaxException(sprintf('The configuration is not valid YAML in "%s".', $resource), 0, $e);
         }
