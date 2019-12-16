@@ -1,4 +1,11 @@
+# DEPRECATED
+
+[Notice] this package is abandoned and the recommended alternative is [formal-bears/formal-bears](https://github.com/kumamidori/FormalBears.FormalBears).
+
+-----
+
 # FormalBears
+
  
 Meta framwork for [BEAR.Sunday](https://github.com/bearsunday/BEAR.Sunday) applications
 
